@@ -1,13 +1,15 @@
+""" https://leetcode.com/problems/two-sum """
+
 from typing import List
 
-# https://leetcode.com/problems/two-sum
-
 def two_sum(nums: List[int], target: int) -> List[int]:
+    """ return indices of the two numbers such that they add up to target """
     position = {}
-    for i in range(len(nums)):
-        complement = target - nums[i]
-        if(complement in position):
+    for i, number in enumerate(nums):
+        complement = target - number
+        if complement in position:
             return [position[complement], i]
-        position[nums[i]] = i
+        position[number] = i
+        return [-1]
 
 print(two_sum([1,2,3,4],3))
