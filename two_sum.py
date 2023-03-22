@@ -1,7 +1,6 @@
-
 from typing import List
 
-# https://leetcode.com/problems/two-sum/
+# https://leetcode.com/problems/two-sum
 
 def two_sum(nums: List[int], target: int) -> List[int]:
     position = {}
